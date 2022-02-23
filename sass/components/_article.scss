@@ -6,12 +6,9 @@
         margin-bottom: 50px;
     }
     .section-link {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         margin-bottom: 150px;
-    }
-
-    &-main {
-        
     }
 
     &-list {

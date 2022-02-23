@@ -547,7 +547,8 @@ a {
   margin-bottom: 50px;
 }
 .article .section-link {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-bottom: 150px;
 }
 .article-list {
