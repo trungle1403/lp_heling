@@ -1,0 +1,38 @@
+.team {
+    padding-top: 160px;
+    background-color: var(--black-color);
+
+    &-main {
+        display: flex;
+        align-items: center;
+        gap: 0 140px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+        color: var(--bg-color);
+    }
+    .section-link {
+        color: var(--bg-color);
+    }
+    &-left {
+        width: 100%;
+        max-width: 616px;
+    }
+    &-text1 {
+        margin-bottom: 25px;
+    }
+    &-text2 {
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .team {
+        padding-top: 100px;
+
+        &-main {
+            flex-direction: column;
+            gap: 70px 0;
+        }
+    }
+}

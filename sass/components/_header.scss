@@ -1,0 +1,217 @@
+.header {
+    background-color: var(--black-color);
+    color: white;
+    .navbar {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 50px;
+        padding: 45px 0;
+        transition: .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 3;
+    }
+
+    .nav-close {
+        display: none;
+    }
+    .nav-item {
+        list-style: none;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        line-height: 30px;
+        font-family: var(--second-font);
+        color: var(--bg-color);
+        opacity: 0.4;
+        transition: .3s ease;
+        &:hover, &.active {
+            opacity: 1;
+        }
+    }
+
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0 30px;
+    }
+    .nav-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 10px 0;
+        cursor: pointer;
+        .line {
+            display: inline-block;
+            background-color: var(--bg-color);
+            height: 3px;
+        }
+        .line1 {
+            width: 8px;
+        }
+        .line2 {
+            width: 23px;
+        }
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0,0,0,.6);
+        transition: .3s ease;
+        opacity: 0;
+        &.active {
+            right: 0;
+            opacity: 1;
+        }
+    }
+    &-main {
+        display: flex;
+        gap: 0 30px;
+        justify-content: center;
+        position: relative;
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 724px;
+        transform: translateY(120px);
+    }
+
+    &-title {
+        font-size: 82px;
+        line-height: 81px;
+        letter-spacing: -2px;
+        margin-bottom: 61px;
+        width: 100%;
+        span {
+            display: block;
+        }
+
+        .hidden{
+            display: inline-block;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &-desc {
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: 100px;
+    }
+    &-line2 {
+        margin-bottom: 40px;
+    }
+
+    &-media {
+        width: 100%;
+        height: 100%;
+        max-width: 450px;
+        max-height: 705px;
+        object-fit: cover;
+        margin-top: 100px;
+        position: relative;
+    }
+    &-image-big {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-small2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .header-desc {
+        margin-bottom: 30px;
+    }
+    .header .hidden{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header-main {
+        flex-direction: column-reverse ;
+    }
+    .header-content {
+        margin-top: 80px;
+        transform: translateY(0);
+    }
+    .header-title {
+        font-size: 46px;
+        line-height: 56px;
+        margin-bottom: 40px;
+    }
+    .header-text {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .navbar {
+        padding: 30px 0 25px;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--black-color);
+        flex-direction: column;
+        gap: 60px 0 !important;
+        box-shadow: 2px 0 5px rgba(255,255,255,0.5);
+    }
+    .nav-toggle {
+        display: flex !important;
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-close {
+        display: block !important;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    
+    .nav-link {
+        font-size: 24px !important;
+        opacity: 0.7;
+    }
+    .header-image-small {
+        position: absolute;
+        left: 15px;
+        bottom: 30px;
+    }
+
+    .header-media {
+        width: 100%;
+        max-width: unset;
+    }
+    .header-image-big {
+        width: 100%;
+        max-width: 330px;
+    }
+    .image-small1 {
+        display: none;
+    }
+    .image-small2 {
+        display: block !important;
+        position: absolute;
+        right: 15px;
+        bottom: 30px;
+        left: unset;
+    }
+}
