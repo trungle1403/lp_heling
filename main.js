@@ -35,4 +35,15 @@ window.addEventListener('load', () => {
         })
     }
     window.addEventListener('scroll', handleScrollActiveLink)
+
+    const swiper = new Swiper('.swiper', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
 })

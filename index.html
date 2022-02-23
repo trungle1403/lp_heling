@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page heling</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 <body>
     <div class="wrapper">
@@ -97,15 +98,38 @@
                         <div class="section-link">All Projects</div>
                     </div>
                 </div>
-                <div class="project-list">
-                    <div class="project-item">
-                        <div class="project-media">
-                            <img src="https://source.unsplash.com/random" alt="" class="project-image">
+                <div class="project-list swiper">
+                    <div class="swiper-wrapper">
+                        <div class="project-item swiper-slide">
+                            <div class="project-media">
+                                <img src="./image/project1.jpg" alt="" class="project-image">
+                            </div>
+                            <div class="container">
+                                <div class="project-name">Dining room</div>
+                                <div class="section-link">View details</div>
+                            </div>
                         </div>
-                        <div class="container">
-                            <div class="project-name">Dining room</div>
-                            <div class="section-link">View details</div>
+                        <div class="project-item swiper-slide">
+                            <div class="project-media">
+                                <img src="./image/project2.jpg" alt="" class="project-image">
+                            </div>
+                            <div class="container">
+                                <div class="project-name">Work room</div>
+                                <div class="section-link">View details</div>
+                            </div>
                         </div>
+                        <div class="project-item swiper-slide">
+                            <div class="project-media">
+                                <img src="./image/project3.jpg" alt="" class="project-image">
+                            </div>
+                            <div class="container">
+                                <div class="project-name">Bath room</div>
+                                <div class="section-link">View details</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
@@ -157,12 +181,11 @@
                 </div>
             </section>
         </main>
-    
         <footer class="footer">
-            <div class="footer-arrow">
+            <a href="#" class="footer-arrow">
                 <img srcSet="./image/footer-arrow.png 2x" alt="">
                 <span>Go to the top</span>
-            </div>
+            </a>
             <div class="container">
                 <div class="footer-main">
                     <div class="footer-left">
@@ -186,7 +209,7 @@
             </div>
         </footer>
     </div>
-
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
